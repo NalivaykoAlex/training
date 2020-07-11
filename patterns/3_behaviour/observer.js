@@ -1,52 +1,50 @@
-// observer behaviour patttern
+// observer behaviour pattern
 
 // формирует зависимости один к многим
 
-
-// так же его могут называть publisher, listener, subcriber, dispatcher
+// так же его могут называть publisher, listener, subscriber, dispatcher
 
 class Subject {
-  constructor() {
-    this.observers = [];
-  }
+    constructor() {
+        this.observers = [];
+    }
 
-  subcriber(observer) {
-    this.observers.push(observer);
-  }
+    subscriber(observer) {
+        this.observers.push(observer);
+    }
 
-  unsubscribe(observer) {
-    this.observers = this.observers.filter(obs => obs !== observer);
-  }
+    unsubscribe(observer) {
+        this.observers = this.observers.filter(obs => obs !== observer);
+    }
 
-  fire(action) {
-    this.observers.forEach((observer) => {
-      observer.update(action);
-    })
-  }
+    fire(action) {
+        this.observers.forEach(observer => {
+            observer.update(action);
+        });
+    }
 }
 
 class Observer {
-  constructor(state = 1) {
-    this.state = state;
-    this.initialStatte = state;
-  }
-
-  update(action) {
-    switch (action.type) {
-      case 'INCREMENT':
-        this.state = ++this.state
-        break;
-      case 'DECREMENT':
-        this.state = --this.state;
-        break;
-      case 'ADD':
-        this.state += action.payload;
-        break;
-      default: 
-        this.state = this.initialStatte;
+    constructor(state = 1) {
+        this.state        = state;
+        this.initialState = state;
     }
 
-  }
+    update(action) {
+        switch (action.type) {
+            case 'INCREMENT': 
+                this.state = ++this.state;
+                break;
+            case 'DECREMENT': 
+                this.state = --this.state;
+                break;
+            case 'ADD': 
+                this.state += action.payload;
+                break;
+            default: 
+                this.state = this.initialState;
+        }
+    }
 }
 
 const stream$ = new Subject();
@@ -54,10 +52,10 @@ const stream$ = new Subject();
 const obs1 = new Observer();
 const obs2 = new Observer(42);
 
-stream$.subcriber(obs1)
-stream$.subcriber(obs2)
+stream$.subscriber(obs1);
+stream$.subscriber(obs2);
 
-// измеяет все подписки
+// изменяет все подписки
 stream$.fire({ type: 'INCREMENT' });
 stream$.fire({ type: 'INCREMENT' });
 stream$.fire({ type: 'DECREMENT' });

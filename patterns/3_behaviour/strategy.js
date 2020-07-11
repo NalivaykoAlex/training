@@ -1,41 +1,41 @@
-// strategy behaviour patttern
+// strategy behaviour pattern
 
 // создавать некую оболочку
 
 class Vehicle {
-  travelTime() {
-    return this.timeTaken
-  }
+    travelTime() {
+        return this.timeTaken;
+    }
 }
 
 class Bus extends Vehicle {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.timeTaken = 10;
-  }
+        this.timeTaken = 10;
+    }
 }
 
 class Taxi extends Vehicle {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.timeTaken = 5;
-  }
+        this.timeTaken = 5;
+    }
 }
 
 class Car extends Vehicle {
-  constructor() {
-    super();
+    constructor() {
+        super();
 
-    this.timeTaken = 3;
-  }
+        this.timeTaken = 3;
+    }
 }
 
 class Commute {
-  travel(transport) {
-    return transport.travelTime();
-  }
+    travel(transport) {
+        return transport.travelTime();
+    }
 }
 
 const commute = new Commute();

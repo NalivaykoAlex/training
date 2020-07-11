@@ -1,21 +1,20 @@
-// singleTon design patttern
+// singleTon design pattern
 
 class Database {
-  constructor(data) {
-    if (Database.exists) {
-      return Database.instance;
+    constructor(data) {
+        if (Database.exists) {
+            return Database.instance;
+        }
+
+        Database.instance = this;
+        Database.exists = true;
+
+        this.data = data;
     }
 
-    Database.instance = this;
-    Database.exists = true;
-
-    this.data = data;
-  }
-
-
-  getData() {
-    return this.data;
-  }
+    getData() {
+        return this.data;
+    }
 }
 
 const mongo = new Database('MongoDB');

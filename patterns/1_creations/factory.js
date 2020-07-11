@@ -1,54 +1,57 @@
-// factory design patttern
+// factory design pattern
 
 class SimpleMembership {
-  constructor(name) {
-    this.name = name;
-    this.cost = 50;
-  }
+    constructor(name) {
+        this.name = name;
+        this.cost = 50;
+    }
 }
 
 class StandardMembership {
-  constructor(name) {
-    this.name = name;
-    this.cost = 150;
-  }
+    constructor(name) {
+        this.name = name;
+        this.cost = 150;
+    }
 }
 
 class PremiumMembership {
-  constructor(name) {
-    this.name = name;
-    this.cost = 500;
-  }
+    constructor(name) {
+        this.name = name;
+        this.cost = 500;
+    }
 }
 
 class MemberFactory {
-  static list = {
-    simple: SimpleMembership,
-    standard: StandardMembership,
-    premium: PremiumMembership
-  }
+    static list = {
+        simple  : SimpleMembership,
+        standard: StandardMembership,
+        premium : PremiumMembership
+    };
 
-  create(name, type = 'simple') {
-    const Membership = MemberFactory.list[type] || MemberFactory.list.simple
-    const member = new Membership(name)
-    member.type = type
-    member.define = function() {
-      console.log(`${this.name} (${this.type}): ${this.cost}`)
+    create(name, type = 'simple') {
+        const Membership = 
+            MemberFactory.list[type] || MemberFactory.list.simple;
+        const member = new Membership(name);
+
+        member.type   = type;
+        member.define = function () {
+            console.log(`${this.name} (${this.type}): ${this.cost}`);
+        };
+
+        return member;
     }
-    return member
-  }
 }
 
 const factory = new MemberFactory();
 
 const members = [
-  factory.create('Alex', 'simple'),
-  factory.create('Daria', 'premium'),
-  factory.create('Ivan', 'standard')
-]
+    factory.create('Alex', 'simple'),
+    factory.create('Daria', 'premium'),
+    factory.create('Ivan', 'standard')
+];
 
 members.forEach(member => {
-  member.define();
-})
+    member.define();
+});
 
 // console.log(members);

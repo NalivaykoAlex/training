@@ -1,45 +1,45 @@
-// template behaviour patttern
+// template behaviour pattern
 
 // определяет некую структуру
 
 class Employee {
-  constructor(name, salary) {
-    this.name = name;
-    this.salary = salary;
-  }
+    constructor(name, salary) {
+        this.name   = name;
+        this.salary = salary;
+    }
 
-  responsibility() {}
+    responsibility() {}
 
-  work() {
-    return `${this.name} выполняет ${this.responsibility()}`
-  }
+    work() {
+        return `${this.name} выполняет ${this.responsibility()}`;
+    }
 
-  getPaid() {
-    return `${this.name} имеет ЗП ${this.salary}`
-  }
+    getPaid() {
+        return `${this.name} имеет ЗП ${this.salary}`;
+    }
 }
 
-class Deleveloper extends Employee {
-  constructor(name, salary) {
-    super(name, salary);
-  }
+class Developer extends Employee {
+    constructor(name, salary) {
+        super(name, salary);
+    }
 
-  responsibility() {
-    return `процесс созданния программ`;
-  }
+    responsibility() {
+        return `процесс создания программ`;
+    }
 }
 
 class Tester extends Employee {
-  constructor(name, salary) {
-    super(name, salary);
-  }
+    constructor(name, salary) {
+        super(name, salary);
+    }
 
-  responsibility() {
-    return `процесс тестирования`;
-  }
+    responsibility() {
+        return `процесс тестирования`;
+    }
 }
 
-const dev = new Deleveloper('Алексей', 100000);
+const dev = new Developer('Алексей', 100000);
 console.log(dev.getPaid());
 console.log(dev.work());
 

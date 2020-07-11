@@ -1,46 +1,44 @@
-// facade sctrucural patttern
+// facade structural pattern
 
 class Complaints {
-  constructor() {
-    this.complaints = [];
-  }
+    constructor() {
+        this.complaints = [];
+    }
 
-  reply(complaint) {
+    reply(complaint) {}
 
-  }
+    add(complaint) {
+        this.complaints.push(complaint);
 
-  add(complaint) {
-    this.complaints.push(complaint);
-
-    return this.reply(complaint);
-  }
+        return this.reply(complaint);
+    }
 }
 
-class ProductCompaints extends Complaints {
-  reply({ id, customer, details }) {
-    return `Product: ${id}: ${customer} (${details})`
-  }
+class ProductComplaints extends Complaints {
+    reply({ id, customer, details }) {
+        return `Product: ${id}: ${customer} (${details})`;
+    }
 }
 
-class ServiceCompaints extends Complaints {
-  reply({ id, customer, details }) {
-    return `Service: ${id}: ${customer} (${details})`
-  }
+class ServiceComplaints extends Complaints {
+    reply({ id, customer, details }) {
+        return `Service: ${id}: ${customer} (${details})`;
+    }
 }
 
 class ComplaintRegistry {
-  register(customer, type, details) {
-    const id = Date.now();
-    let complaint;
+    register(customer, type, details) {
+        const id = Date.now();
+        let complaint;
 
-    if (type === 'service') {
-      complaint = new ServiceCompaints();
-    } else {
-      complaint = new ProductCompaints();
+        if (type === 'service') {
+            complaint = new ServiceComplaints();
+        } else {
+            complaint = new ProductComplaints();
+        }
+
+        return complaint.add({ id, customer, details });
     }
-
-    return complaint.add({ id, customer, details });
-  }
 }
 
 const registry = new ComplaintRegistry();
