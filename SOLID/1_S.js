@@ -1,6 +1,7 @@
 // single Responsibility principle
 
-// сущность отвечает за что то одно
+// Класс должен обладать только одной зоной ответственности 
+
 
 class News {
     constructor(title, text) {
