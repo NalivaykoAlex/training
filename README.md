@@ -13,3 +13,8 @@
 - [Вопросы и ответы](https://github.com/NalivaykoAlex/training/tree/master/questions/list.md)
 
 - [70 вопросов по JavaScript для подготовки к собеседованию](https://habr.com/ru/post/486820/) 
+- [5 типовых задач на собеседованиях по JavaScript](https://tproger.ru/translations/common-javascript-interview-challenges/)
+- [Алгоритмы](https://github.com/trekhleb/javascript-algorithms)
+
+## TODO что такое Reflow, Repaint, Event Loop, Microtask
+## TODO различия монолитных и атомарных SPA
