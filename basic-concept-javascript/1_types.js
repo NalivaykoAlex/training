@@ -1,6 +1,6 @@
 // null, undefined, string, number, boolean, object, symbol, bigInt (8 типов данных)
 
-// object единственный не примитивный тип данных, остальные примитивные тип данных
+// object единственный не примитивный тип данных, остальные примитивные типы данных
 
 console.log(typeof null); // вывод будет object
 console.log(typeof undefined);
