@@ -43,18 +43,6 @@ for (var i = 0; i < arr.length; i++) {
     );
 }
 
-// === 3 variant
-
-for (var i = 0; i < arr.length; i++) {
-    setTimeout(
-        function (b) {
-            console.log('Index: ' + b + ', element: ' + arr[b]);
-        },
-        3000,
-        i
-    );
-}
-
 // === 4 variant
 
 for (var i = 0; i < arr.length; i++) {
