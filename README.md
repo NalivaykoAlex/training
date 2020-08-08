@@ -13,5 +13,17 @@
 - [Вопросы и ответы](https://github.com/NalivaykoAlex/training/tree/master/questions/list.md)
 
 - [70 вопросов по JavaScript для подготовки к собеседованию](https://habr.com/ru/post/486820/) 
+
 - [5 типовых задач на собеседованиях по JavaScript](https://tproger.ru/translations/common-javascript-interview-challenges/)
+
 - [Алгоритмы](https://github.com/trekhleb/javascript-algorithms)
+
+- [Концепт Big O (Оценка сложности алгоритмов)](https://www.youtube.com/watch?v=ZRdOb4yR0kk)
+
+- [Оценка сложности Big O Вебинар 2020 04 08 Часть 1](https://www.youtube.com/watch?v=g7H8e4TFnTU)
+
+- [Оценка сложности Big O Вебинар 2020 04 08 Часть 2](https://www.youtube.com/watch?v=SQzKcc32Bjk)
+
+- [Оценка сложности Big O Вебинар 2020 04 08 Часть 3](https://www.youtube.com/watch?v=BbH7DhYAwl4)
+
+- [Таблица сложности алгоритмов](https://www.bigocheatsheet.com/)
