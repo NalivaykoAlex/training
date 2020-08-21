@@ -28,3 +28,23 @@ function findDuplicates(arr) {
 
 console.log(findDuplicates([2,2,1]), 'result2');
 console.log(findDuplicates([4,1,2,1,2]), 'result3');
+
+// Написать функцию, подсчитывающую количество каждого уникального символа в строке.
+// Например,
+// на вход приходит строка: "aaabbc",
+// на выходе получаем: a - 3, b - 2, c - 1.
+
+function findUniq(str) {
+    // let result = {};
+    //
+    // for (let item of str) {
+    //     if (result[item]) {
+    //         result[item] = result[item] + 1
+    //     } else {
+    //         result[item] = 1
+    //     }
+    // }
+    
+}
+
+findUniq("aaabbc")
