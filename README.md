@@ -27,3 +27,5 @@
 - [Оценка сложности Big O Вебинар 2020 04 08 Часть 3](https://www.youtube.com/watch?v=BbH7DhYAwl4)
 
 - [Таблица сложности алгоритмов](https://www.bigocheatsheet.com/)
+
+- [Архитектура WEB приложений](https://www.youtube.com/watch?v=9mZmc6a0tmM&t=2s)
