@@ -6,38 +6,52 @@
  * Запрашиваемого поля в объекте может не быть.
  */
 
-function get(obj, paths) {
-    const arrayPath = paths.split('.'); // [ 'a', 'b']
-    let findObj = obj;
-    let count = 0;
+// function get(obj, paths) {
+//     const arrayPath = paths.split('.'); // [ 'a', 'b']
+//     let findObj = obj;
+//     let count = 0;
   
-     while (count !== arrayPath.length) {
-       const index = arrayPath[count];
+//      while (count !== arrayPath.length) {
+//        const index = arrayPath[count];
   
-       if (findObj[index]) {
-         findObj = findObj[index];
-        } else {
-          findObj = undefined;
+//        if (findObj[index]) {
+//          findObj = findObj[index];
+//         } else {
+//           findObj = undefined;
   
-          count++;
-        }
-        count++;
-     }
+//           count++;
+//         }
+//         count++;
+//      }
   
-    return findObj
-   }
+//     return findObj
+//    }
+
+get = (obj, paths) => {
+  const arrayPath = paths.split('.'); // [ 'a', 'b']
   
-  const obj = { 
-    a: { 
-      b: { 
-        c: 'd' 
-      },
-      e: 'f'
+  return arrayPath.reduce((acc, currentValue) => {
+    if (acc && acc[currentValue]) {
+      acc = acc[currentValue];
+    } else {
+      acc = undefined;
     }
-  };
+
+    return acc;
+  }, obj);
+}
   
-  console.log(get(obj, 'a.b')); // { c : 'd' }
-  console.log(get(obj, 'a.b.c'));  // 'd'
-  console.log(get(obj, 'a.e'));  // 'f'
-  console.log(get(obj, 'a.x.e')); // undefined
+const obj = { 
+  a: { 
+    b: { 
+      c: 'd' 
+    },
+    e: 'f'
+  }
+};
+
+console.log(get(obj, 'a.b')); // { c : 'd' }
+console.log(get(obj, 'a.b.c'));  // 'd'
+console.log(get(obj, 'a.e'));  // 'f'
+console.log(get(obj, 'a.x.e')); // undefined
   
