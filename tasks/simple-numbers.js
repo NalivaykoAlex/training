@@ -1,3 +1,5 @@
+// поиск простых чисел
+
 function pureNumbers(n) {
     const result = [];
 
