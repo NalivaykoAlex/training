@@ -3,6 +3,7 @@
 - [Pattern](https://github.com/NalivaykoAlex/training/tree/master/patterns)
 
 - [S.O.L.I.D](https://github.com/NalivaykoAlex/training/tree/master/SOLID)
+- [S.O.L.I.D примеры](https://github.com/YauhenKavalchuk/useful/blob/main/solid.md)
 
 - [Пример задач](https://github.com/NalivaykoAlex/training/tree/master/tasks)
 
