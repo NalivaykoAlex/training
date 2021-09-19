@@ -1,5 +1,3 @@
-// this work place...
-
 const inputCalc = document.getElementById('count');
 
 function input(e) {
