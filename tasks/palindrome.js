@@ -22,14 +22,7 @@ const newPalindrome = str => {
     const string = str.toLowerCase().trim().replace(" ", "");
     const newString = string.split("").reverse().join("");
 
-    console.log(string, 'string');
-    console.log(newString, 'newString');
-
-    if (string === newString) {
-        return true;
-    } else  {
-        return false;
-    }
+    return string === newString
 };
 
 console.log(newPalindrome('civic civic '));;

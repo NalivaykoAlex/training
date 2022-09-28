@@ -19,6 +19,8 @@
 
 - [Алгоритмы](https://github.com/trekhleb/javascript-algorithms)
 
+- [Front-end Science Big O](https://www.youtube.com/watch?v=Fu4BzQNN0Qs)
+
 - [Концепт Big O (Оценка сложности алгоритмов)](https://www.youtube.com/watch?v=ZRdOb4yR0kk)
 
 - [Оценка сложности Big O Вебинар 2020 04 08 Часть 1](https://www.youtube.com/watch?v=g7H8e4TFnTU)

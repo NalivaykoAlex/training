@@ -10,8 +10,6 @@ const sumOfTwo = (arr, target) => {
             if (arr[i] + arr[j] === target) {
                 result.push(i);
                 result.push(j);
-                // result.push(arr[i]);
-                // result.push(arr[j]);
             }
         }
     }

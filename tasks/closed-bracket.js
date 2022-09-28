@@ -12,7 +12,7 @@ function correctBrackets(str) {
     const stack = [];
 
     // проверяем количество на четность
-    if (strKeys.length % 2) {
+    if (strKeys.length % 2 !== 0) {
         return false;
     }
 

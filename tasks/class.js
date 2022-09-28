@@ -144,3 +144,28 @@ const PersonES5_INVOKE = (function () {
     PersonES6.type = 'PERSON';
     return PersonES6;
 })();
+
+
+const list = {
+    table_one: {
+        rows: [{1: '1', 2: '2'}],
+        hiddenColumns: ['2', '3']
+    },
+    table_two: {
+        rows: [{3: '3', 4: '4'}],
+        hiddenColumns: ['4', '5']
+    }
+}
+
+const kek = Object.entries(list).reduce((result, [_, {rows, hiddenColumns}]) => {
+    result.allSearchData = result.allSearchData.concat(rows)
+    result.allHiddenColumns = result.allHiddenColumns.concat(hiddenColumns)
+
+    return result
+}, {
+    allSearchData: [],
+    allHiddenColumns: [],
+
+})
+
+console.log(kek, '123123123')
